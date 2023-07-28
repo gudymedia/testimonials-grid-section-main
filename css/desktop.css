@@ -1,0 +1,37 @@
+
+
+@media(min-width: 570px){
+  .main-container{
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "card1 card1 card1"
+    "card2 card2 card3"
+    "card4 card4 card4"
+    "card5 card5 card5";
+  }
+  .card>p{
+    font-size: 12px;
+  }
+}
+@media(min-width: 800px){
+  .main-container{
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "card1 card1 card2"
+    "card3 card4 card4"
+    "card5 card5 card5";
+  }
+
+}
+@media(min-width: 1000px){
+  .main-container{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: 
+    "card1 card1 card2 card5"
+    "card3 card4 card4 card5";
+  }
+}

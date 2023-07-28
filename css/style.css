@@ -1,0 +1,148 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html{
+  scroll-behavior: smooth;
+}
+:root{
+  --violet: hsl(263, 55%, 52%);
+  --dark-grayish-blue: hsl(217, 19%, 35%);
+  --dark-blackish-blue: hsl(219, 29%, 14%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(0, 0%, 81%);
+  --grayish-blue: hsl(210, 46%, 95%);
+  --opacity-70: hsla(210, 38%, 95%, 0.7);
+  --opacity-50: hsla(210, 38%, 95%, 0.5);
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--grayish-blue);
+}
+/* UTILITY */
+ .text .position.dark{
+  color: hsl(217, 19%, 35%);
+}
+ .card.card1, .card.card2, 
+ .card.card4{
+  color: hsl(210, 46%, 95%);
+}
+ .card.card3, .card.card5{
+  color: hsla(217, 30%, 14%, 0.829);
+}
+.card h3{
+  font-size: 15px;
+  margin: 1rem 0;
+  line-height: 1.3;
+}
+.card>p{
+  font-size: 10px;
+  margin: 1rem 0;
+  /* padding: 5px; */
+  font-weight: lighter;
+  line-height: 1.5;
+}
+
+.card-header img{
+  width: 30px;
+  height: auto;
+  border-radius: 50%;
+  border: 1.8px solid hsla(0, 0%, 100%, 0.484);
+}
+.card-header img.violet-radius{
+
+  border: 1.8px solid hsla(263, 55%, 52%, 0.692);
+}
+
+/* ------------------------- */
+
+.main-container{
+  width: 90%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, auto);
+  grid-template-areas: 
+  "card1"
+  "card2"
+  "card3"
+  "card4"
+  "card5";
+  gap:25px;
+}
+.card{
+  height: auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+/* -------- CARD 1 ---------------- */
+.card1{
+  grid-area: card1;
+  background-color: var(--violet);
+  color: var(--grayish-blue);
+}
+.card-header{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.card-header .img-text{
+  display: flex;
+}
+.card-header .text{
+  margin-left: 5px;
+  line-height: 1;
+}
+.text p{
+  font-size: 12px;
+  font-weight: bold;
+}
+.text .position{
+  font-size: 11px;
+  color: var(--opacity-50);
+}
+.card-header .quote{
+  background: url(/images/bg-pattern-quotation.svg) no-repeat center/cover;
+  width: 90px;
+  height: 90px;
+  margin-top: -20px;
+}
+.card1 h3{
+  margin-top: -1rem;
+}
+/* ---------------------------- */
+.card2{
+  grid-area: card2;
+  background-color: var(--dark-grayish-blue);
+}
+.card3{
+  grid-area: card3;
+  background-color: var(--white);
+}
+.card4{
+  grid-area: card4;
+  background-color: var(--dark-blackish-blue);
+}
+.card5{
+  grid-area: card5;
+  background-color: var(--white);
+}
+
+
+
+
+
+
+
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
